@@ -1,0 +1,32 @@
+<marquee direction= up height=320px>
+    <?php
+    $conn = mysqli_connect("localhost","anits","anits123","anits");
+    $query="select * from image order by likes desc";
+    $res=mysqli_query($conn,$query);
+ 
+    while($row=mysqli_fetch_assoc($res))
+    {
+    if($row['likes']>0){
+    ?>
+   
+     <div class="bxx">
+      <table>
+        <tr>
+        
+        <td><img class="img" src="./IBupload/<?php echo $row['imageurl'];?>" height="300px" width="350px"></td>
+        
+        </tr>
+        <tr>
+          <td><img src="homelike.png" width="38px" height="38px"><?php echo $row['likes'];?></td>
+        </tr>
+        </table> 
+    
+          </div>
+          
+    
+    <?php
+    }
+    }
+    ?>
+  
+  </marquee>          

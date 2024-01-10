@@ -1,0 +1,36 @@
+ <tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
+       <div class="out">
+        <?php
+        $conn = mysqli_connect("localhost","anits","anits123","anits");
+        $query="SELECT * from image order by created DESC";
+        $res=mysqli_query($conn,$query);
+        while($row=mysqli_fetch_assoc($res))
+			  {
+        ?>
+          <div class="inside">
+        <tr>
+          <td><img src="https://cutewallpaper.org/24/username-icon-png/username-svg-png-icon-free-download-401900-onlinewebfontscom.png" height="35px" width="35px"><?php echo $row['name'];?></td>
+        </tr>
+        <td><img class="img" src="./IBupload/<?php echo $row['imageurl'];?>" height="400px" width="500px"></td>
+        </tr>
+        <tr>
+          
+          
+          <form action="#"method="post">
+          <td><input type="hidden" value="<?php echo $row['id'];?>" name="id"></td>
+         
+        </tr>
+        <tr>
+      <td><input type="image" src="https://www.nicepng.com/png/detail/778-7786050_download-instagram-like-icon-png.png"alt="Submit" width="38" height="38" > <?php echo " Like    ".$row['likes']."";?>
+    
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="image" src="https://icons.veryicon.com/png/o/hardware/jackdizhu_pc/comment-25.png"alt="Submit" width="38" height="38" > <?php echo "comment";?>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="image" src="https://www.vhv.rs/dpng/d/244-2447270_instagram-share-icon-png-png-download-instagram-share.png"alt="Submit" width="38" height="38" > <?php echo "share";?>
+    </td>
+        </tr>
+        </form>
+        <tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
+        </div>
+        <?PHP
+        }
+        ?>
+     </div>
