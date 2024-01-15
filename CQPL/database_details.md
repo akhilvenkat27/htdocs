@@ -1,7 +1,7 @@
 Account Details:
 
-user name : swift 
-user pwd : P4oRnJLJl0TXlV7c
+                                                user name : swift 
+                                                user pwd : P4oRnJLJl0TXlV7c
 
 Database connection:
 
