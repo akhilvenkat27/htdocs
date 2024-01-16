@@ -771,7 +771,7 @@ header( "location:index.php" );
                                     </div>
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                        <a href="save_history.php"><button type="button" class="btn btn-primary">Save</button>
+                                        <a href="save_history.php"><button type="button" class="btn btn-primary">Save</button></a>
                                     </div>
                                     </div>
                                 </div>
